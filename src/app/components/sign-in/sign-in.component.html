@@ -1,0 +1,14 @@
+<app-header></app-header>
+<section class="container mt-5">
+  <h1>Sign in</h1>
+  <form (ngSubmit)="onSubmit()" novalidate>
+    <div>
+      <mat-form-field appearance="outline" class="">
+        <input name="userName" [(ngModel)]="currentUser.userName" required matInput placeholder="User name">
+      </mat-form-field>
+    </div>
+    <div>
+      <button type="submit" mat-flat-button color="primary">Sign in</button>
+    </div>
+  </form>
+</section>
