@@ -21,7 +21,7 @@ export class AddAddressComponent implements OnInit {
   constructor(private formBuilder: FormBuilder) {
     this.formControls = {
       firstName: this.formBuilder.control('', [Validators.required]),
-      zipCode: this.formBuilder.control('', [Validators.required, Validators.minLength(5), Validators.maxLength(5)]),
+      zipCode: this.formBuilder.control('', [Validators.required, Validators.pattern("^[0-9]{5}$")]),
     };
     this.addAddressForm = this.formBuilder.group(this.formControls);
   }
