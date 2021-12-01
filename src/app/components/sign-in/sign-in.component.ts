@@ -1,8 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { CurrentUser } from 'src/app/models/current-user.model';
 import { AuthorizationService } from 'src/app/services/authorization.service';
+import { CurrentUser } from 'src/app/shared/models/model';
 
 @Component({
   selector: 'app-sign-in',

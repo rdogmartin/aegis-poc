@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { CurrentUser } from 'src/app/models/current-user.model';
 import { AuthorizationService } from 'src/app/services/authorization.service';
+import { CurrentUser } from 'src/app/shared/models/model';
 import { CurrentUserQuery } from 'src/app/state/current-user/current-user.query';
 
 @Component({

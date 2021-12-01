@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Store, StoreConfig } from '@datorama/akita';
-import { CurrentUser } from 'src/app/models/current-user.model';
+import { CurrentUser } from 'src/app/shared/models/model';
 
 function createInitialState(): CurrentUser {
   return {

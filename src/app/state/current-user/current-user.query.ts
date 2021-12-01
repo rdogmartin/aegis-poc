@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Query } from '@datorama/akita';
-import { CurrentUser } from 'src/app/models/current-user.model';
+import { CurrentUser } from 'src/app/shared/models/model';
 import { CurrentUserStore } from './current-user.store';
 
 @Injectable({ providedIn: 'root' })

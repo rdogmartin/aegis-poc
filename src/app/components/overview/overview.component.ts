@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./overview.component.css']
 })
 export class OverviewComponent {
-
+  
+  public throwError(): void {
+    throw new Error('This is a test error');
+  }
 }

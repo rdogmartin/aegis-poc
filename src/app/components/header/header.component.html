@@ -1,7 +1,7 @@
 <header class="container py-3">
   <div class="row">
     <h1 class="col">
-      <a routerLink="/">Aegis Proof of Concept</a>
+      <a routerLink="/">Aegis Angular POC</a>
     </h1>
     <p class="col text-right">
       <ng-container *ngIf="currentUser$ | async as currentUser">
@@ -12,5 +12,8 @@
         <a *ngIf="!currentUser.userName" routerLink="/signin">Sign In</a>
       </ng-container>
     </p>
+  </div>
+  <div class="row">
+    <a routerLink="/orders">My orders</a>
   </div>
 </header>
