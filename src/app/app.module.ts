@@ -1,3 +1,4 @@
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
@@ -15,6 +16,7 @@ import { OrdersComponent } from './components/orders/orders.component';
 import { OverviewComponent } from './components/overview/overview.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { ErrorHandlerModule } from './error-handling/error-handler.module';
+import { JwtInterceptor } from './services/jwt-interceptor.service';
 import { PipesModule } from './shared/pipes/pipes.module';
 import { SharedModule } from './shared/shared.module';
 
@@ -32,6 +34,7 @@ import { SharedModule } from './shared/shared.module';
     BrowserAnimationsModule,
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     /** Our modules */
     PipesModule,
     SharedModule,
@@ -42,7 +45,13 @@ import { SharedModule } from './shared/shared.module';
     MatInputModule,
     environment.production ? [] : AkitaNgDevtools.forRoot()
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: JwtInterceptor,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
