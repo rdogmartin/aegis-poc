@@ -5,7 +5,7 @@
 // import { SignInComponent } from './sign-in.component';
 
 
-// describe('EditUserComponent', () => {
+// describe('SignInComponent', () => {
 //   let component: SignInComponent;
 //   let authorizationServiceMock: AuthorizationService;
 //   let routerMock: Router;
