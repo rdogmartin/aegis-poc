@@ -5,7 +5,7 @@ export class RaygunErrorHandler implements ErrorHandler {
   public constructor() { }
 
   public handleError(err: any): void {
-    console.log(`An error occurred: ${err}`)
+    console.error(`An error occurred: ${err}`)
     // Log error to a service like Raygun
     // this.raygunService.logError(err);
   }

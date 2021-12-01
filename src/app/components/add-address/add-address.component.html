@@ -1,0 +1,28 @@
+<app-header></app-header>
+<section class="container mt-5">
+  <h1>Add an address</h1>
+
+  <form [formGroup]="addAddressForm" (ngSubmit)="onSubmit()">
+    <div class="mt-4">
+      <input type="text" maxlength="30" class="form-control" placeholder="Name" formControlName="firstName">
+      <p *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)" class="alert alert-danger">
+        First name is required
+      </p>
+    </div>
+    <div class="mt-4">
+      <input type="tel" minlength="5" maxlength="5" class="form-control" placeholder="Zip code" formControlName="zipCode">
+      <p *ngIf="zipCode.invalid && (zipCode.dirty || zipCode.touched)" class="alert alert-danger">
+        Zip code is required
+      </p>
+    </div>
+    <div class="mt-4">
+      <button
+        type="submit"
+        class="btn btn-primary btn-block mt-0 button-width"
+        [ngClass]="{'btn-light btn-disabled': !addAddressForm.valid}"
+        [disabled]="!addAddressForm.valid">
+          Add
+        </button>
+    </div>
+  </form>
+</section>

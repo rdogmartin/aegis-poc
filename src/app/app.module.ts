@@ -1,6 +1,6 @@
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule, Optional, SkipSelf } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { BrowserModule } from '@angular/platform-browser';
@@ -19,6 +19,7 @@ import { ErrorHandlerModule } from './error-handling/error-handler.module';
 import { JwtInterceptor } from './services/jwt-interceptor.service';
 import { PipesModule } from './shared/pipes/pipes.module';
 import { SharedModule } from './shared/shared.module';
+import { AddAddressComponent } from './components/add-address/add-address.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { SharedModule } from './shared/shared.module';
     OverviewComponent,
     SignInComponent,
     OrdersComponent,
+    AddAddressComponent,
   ],
   imports: [
     /** Angular modules */
@@ -35,6 +37,7 @@ import { SharedModule } from './shared/shared.module';
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    ReactiveFormsModule,
     /** Our modules */
     PipesModule,
     SharedModule,

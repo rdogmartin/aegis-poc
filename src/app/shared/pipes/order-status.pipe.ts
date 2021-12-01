@@ -5,6 +5,7 @@ import { OrderStatus } from '../models/enum';
   name: 'orderStatus',
 })
 export class OrderStatusPipe implements PipeTransform {
+
   public transform(value: OrderStatus): string {
     switch (value) {
       case OrderStatus.Created:

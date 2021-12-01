@@ -3,13 +3,11 @@
   <h1>Edit user</h1>
   <form (ngSubmit)="onSubmit(userName.value)" novalidate>
     <div>
-      <mat-form-field appearance="outline">
-        <input #userName name="userName" (keyup)="onKeyUp($event)" value="{{currentUser.userName}}" required matInput placeholder="User name">
-      </mat-form-field>
+      <input #userName name="userName" (keyup)="onKeyUp($event)" value="{{currentUser.userName}}" required placeholder="User name">
     </div>
-    <div>
-      <button type="button" mat-flat-button color="primary" (click)="onCancel()">Cancel</button>
-      <button type="submit" mat-flat-button color="primary">Save</button>
+    <div class="mt-4">
+      <button type="button" class="btn btn-primary btn-block mt-0 button-width" (click)="onCancel()">Cancel</button>
+      <button type="submit" class="btn btn-primary btn-block mt-0 button-width">Save</button>
     </div>
   </form>
 </section>
