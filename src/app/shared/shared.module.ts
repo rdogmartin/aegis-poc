@@ -1,12 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 
+import { DirectivesModule } from './directives/directives.module';
 import { PipesModule } from './pipes/pipes.module';
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
+    DirectivesModule,
     PipesModule,
   ]
 })

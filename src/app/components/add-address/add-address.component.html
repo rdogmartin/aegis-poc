@@ -2,7 +2,7 @@
 <section class="container mt-5">
   <h1>Add an address</h1>
 
-  <form [formGroup]="addAddressForm" (ngSubmit)="onSubmit()">
+  <form [formGroup]="addAddressForm">
     <div class="mt-4">
       <input type="text" maxlength="30" class="form-control" placeholder="Name" formControlName="firstName">
       <p *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)" class="alert alert-danger">
@@ -16,11 +16,12 @@
       </p>
     </div>
     <div class="mt-4">
-      <button
-        type="submit"
+      <button appDisableAfterClick
+        type="button"
         class="btn btn-primary btn-block mt-0 button-width"
         [ngClass]="{'btn-light btn-disabled': !addAddressForm.valid}"
-        [disabled]="!addAddressForm.valid">
+        [disabled]="!addAddressForm.valid"
+        (click)="onSubmit()">
           Add
         </button>
     </div>

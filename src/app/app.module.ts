@@ -1,4 +1,4 @@
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
@@ -10,6 +10,7 @@ import { AkitaNgDevtools } from '@datorama/akita-ngdevtools';
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AddAddressComponent } from './components/add-address/add-address.component';
 import { EditUserComponent } from './components/edit-user/edit-user.component';
 import { HeaderComponent } from './components/header/header.component';
 import { OrdersComponent } from './components/orders/orders.component';
@@ -17,9 +18,9 @@ import { OverviewComponent } from './components/overview/overview.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { ErrorHandlerModule } from './error-handling/error-handler.module';
 import { JwtInterceptor } from './services/jwt-interceptor.service';
+import { DirectivesModule } from './shared/directives/directives.module';
 import { PipesModule } from './shared/pipes/pipes.module';
 import { SharedModule } from './shared/shared.module';
-import { AddAddressComponent } from './components/add-address/add-address.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { AddAddressComponent } from './components/add-address/add-address.compon
     HttpClientModule,
     ReactiveFormsModule,
     /** Our modules */
+    DirectivesModule,
     PipesModule,
     SharedModule,
     AppRoutingModule,
