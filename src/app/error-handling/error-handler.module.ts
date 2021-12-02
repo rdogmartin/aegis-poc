@@ -1,12 +1,12 @@
 import { ErrorHandler, NgModule, Optional, SkipSelf } from '@angular/core';
 
-import { RaygunErrorHandler } from './raygun.error-handler';
+import { GlobalErrorHandler } from './global-error-handler';
 
 @NgModule({
   providers: [
     {
       provide: ErrorHandler,
-      useClass: RaygunErrorHandler,
+      useClass: GlobalErrorHandler,
     },
   ],
 })

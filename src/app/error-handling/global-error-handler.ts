@@ -1,7 +1,7 @@
 import { ErrorHandler, Injectable } from '@angular/core';
 
 @Injectable()
-export class RaygunErrorHandler implements ErrorHandler {
+export class GlobalErrorHandler implements ErrorHandler {
   public constructor() { }
 
   public handleError(err: any): void {
