@@ -6,7 +6,8 @@ export class GlobalErrorHandler implements ErrorHandler {
 
   public handleError(err: any): void {
     console.error(`An error occurred: ${err}`)
-    // Log error to a service like Raygun
+    // Tell user and log error
+    // alert('Something went wrong');
     // this.raygunService.logError(err);
   }
 }

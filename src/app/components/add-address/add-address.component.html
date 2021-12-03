@@ -19,7 +19,6 @@
       <button appDisableAfterClick
         type="button"
         class="btn btn-primary btn-block mt-0 button-width"
-        [ngClass]="{'btn-light btn-disabled': !addAddressForm.valid}"
         [disabled]="!addAddressForm.valid"
         (click)="onSubmit()">
           Add
